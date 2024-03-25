@@ -6,3 +6,4 @@ def func1(n):
 
 
 func1(4)
+print(5 // 2)
