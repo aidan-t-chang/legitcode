@@ -6,4 +6,6 @@ def func1(n):
 
 
 func1(4)
-print(5 // 2)
+
+arr = [1,2,3,4,5]
+print(arr[len(arr)-1])
