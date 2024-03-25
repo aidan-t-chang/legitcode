@@ -1,7 +1,10 @@
 # stupid question, remover 4 and 5 work but remover 5 returns and
 # does what leetcode wants you to do
 # Question: Remove duplicate numbers from a sorted array
-
+# Given an integer array nums sorted in non-decreasing order, 
+# remove the duplicates in-place such that each unique element 
+# appears only once. The relative order of the elements should be 
+# kept the same. Then return the number of unique elements in nums.
 
 def remover(nums):
     arr = []
