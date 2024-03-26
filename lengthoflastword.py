@@ -3,7 +3,6 @@
 
 def leng(s):
     w = s.split()
-    gg = w[-1]
-    return len(gg)
+    return len(w[-1].strip())
 
 print(leng('Hello World'))
