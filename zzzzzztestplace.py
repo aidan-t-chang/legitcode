@@ -8,4 +8,9 @@ def func1(n):
 func1(4)
 
 arr = [1,2,3,4,5]
-print(arr[len(arr)-1])
+# print(arr[len(arr)-1])
+
+g = 'welcome to the jungle'
+f = g.split()
+
+print(f[-1])
