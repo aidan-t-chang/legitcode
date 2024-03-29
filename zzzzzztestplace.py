@@ -14,3 +14,6 @@ g = 'welcome to the jungle'
 f = g.split()
 
 print(f[-1])
+
+a = ['abc', 'bcd', 'efg', 'cde']
+print(sorted(a))
