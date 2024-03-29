@@ -34,14 +34,21 @@ def searchInsert(nums, target):
 
 def binary2(nums, target):
     min = 0
-    max = len(nums) - 1
-    avg = (min + max) // 2
-    return nums
+    max = len(nums)
+    while min < max:
+        mid = (min + max) // 2
+        if nums[mid] == target:
+            return mid
+        if nums[mid] < target:
+            min = mid + 1
+        else:
+            max = mid
+    return min
 
-print('return 4', searchInsert([1,3,5,6], 7))
-print('return 1', searchInsert([1,3,5,6], 2))
-print('return 2', searchInsert([1,3,5,6], 5))
-print('return 0', searchInsert([1,3,5,6], 0))
-print('return 1', searchInsert([1,3], 2))
-print('return 2', searchInsert([1,4,6,7,8,9], 6))
-print('return 2', searchInsert([1,2,4,5,6], 3))
+print('return 4', binary2([1,3,5,6], 7))
+print('return 1', binary2([1,3,5,6], 2))
+print('return 2', binary2([1,3,5,6], 5))
+print('return 0', binary2([1,3,5,6], 0))
+print('return 1', binary2([1,3], 2))
+print('return 2', binary2([1,4,6,7,8,9], 6))
+print('return 2', binary2([1,2,4,5,6], 3))
