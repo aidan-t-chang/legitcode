@@ -1,6 +1,7 @@
 # Write a function to find the longest common prefix 
 # string amongst an array of strings.
 # If there is no common prefix, return an empty string "".
+# longest = the working one
 
 def lcp(strs):
     string = ""
@@ -29,6 +30,7 @@ def fortnite(f):
     return f
 
 t = ["flower","flow","flight"]
+''''
 print(t[0][0])
 print(t[1][0])
 print(t[2][0])
@@ -37,3 +39,21 @@ print(t[1][1])
 print(t[2][1])
 g = "fortnite"
 h = "for"
+'''
+def longest(strs):
+    strs = sorted(strs)
+    first = strs[0]
+    last = strs[-1]
+    ans = ''
+    if len(first) == 0:
+        return ''
+    for i in range(0, min(len(first), len(last))):
+        if first[i] != last[i]:
+            return ans
+        ans += first[i]
+    return ans
+        
+f = ["dog","racecar","car"]
+print(sorted(f))
+
+print('1:',longest([""]))
