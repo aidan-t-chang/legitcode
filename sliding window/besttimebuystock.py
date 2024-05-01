@@ -5,11 +5,11 @@
 
 def besttime(prices):
     l, r = 0, 1
-    max = 0
+    max1 = 0
     while r < len(prices):
         if prices[l] <= prices[r]:
-            max = max(max, (l - r))        
+            max1 = max(max1, (prices[r] - prices[l])) 
         else:
             l = r
-        r += 1
-    return max
+        r += 1     
+    return max1
