@@ -1,4 +1,4 @@
-import pandas as pd #type: ignore
+import pandas as pd
 
 def article_views(views):
     # Filter rows where author_id and viewer_id are the same (authors viewing their own articles)

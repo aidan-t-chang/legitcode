@@ -1,4 +1,4 @@
-import pandas as pd #type: ignore
+import pandas as pd
 
 def big_countries(world: pd.DataFrame) -> pd.DataFrame:
     data = world[['name', 'population', 'area']]
