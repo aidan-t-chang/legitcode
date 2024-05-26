@@ -11,7 +11,7 @@
 # The student was never late ('L') for 3 or more consecutive days.
 # Given an integer n, 
 # return the number of possible attendance records of length n that make a student eligible for an attendance award. 
-# The answer may be very large, so return it modulo 109 + 7.
+# The answer may be very large, so return it modulo 109 + 7
 from collections import defaultdict
 
 
