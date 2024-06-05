@@ -38,7 +38,7 @@ class Solution:
         return level
     
     # Iterative DFS Solution
-    def maxDepth(self, root) -> int:
+    def maxDepth2(self, root) -> int:
         stack = [[root, 1]]
         res = 0 # if there is a null root node, res will stay 0 because of if statement
         while stack:
