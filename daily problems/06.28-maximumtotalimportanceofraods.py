@@ -27,4 +27,3 @@ class Solution:
             label += 1 # increment the importance(label) of a node as the iteration through the count continues
         return res
 
-print(mar(5, [[0,1],[1,2],[2,3],[0,2],[1,3],[2,4]]))
