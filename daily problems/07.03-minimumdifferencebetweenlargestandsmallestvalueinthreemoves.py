@@ -15,6 +15,9 @@ def mana(nums):
     res = nums[-1] - nums[0]
     for i in range(4):
         res = min(res, nums[-(4-i)] - nums[i])
+        #equivalent to just going through every possible combination 
+        # of left and right values removed
+        # nums[4]-nums[0], nums[3]-nums[1], ....
     return res
 
 mana([1,5,0,10,14,1,1,1])
