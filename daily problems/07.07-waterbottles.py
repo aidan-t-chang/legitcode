@@ -11,7 +11,6 @@
 class Solution:
     def numWaterBottles(self, numBottles, numExchange):
         res = numBottles # always possible you can drink all available bottles at start
-        numEmpty = numBottles 
         while numBottles >= numExchange:
             newNew = numBottles // numExchange # number of new full bottles
             remainder = numBottles % numExchange # remainder of empty bottles after exchange
