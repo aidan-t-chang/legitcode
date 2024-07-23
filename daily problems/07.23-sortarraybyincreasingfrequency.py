@@ -7,9 +7,13 @@ from collections import Counter
 
 
 
-def frequencySort(nums):
-    count = Counter(nums)
-    count.sort()
-    return count
+class Solution:
+    def frequencySort(self, nums):
+        count = Counter(nums)
 
-print(frequencySort([1,1,2,2,2,3]))
+        def custom_sort(n):
+            return (count[n], -n)
+
+        nums.sort(key=custom_sort)
+
+        return nums
