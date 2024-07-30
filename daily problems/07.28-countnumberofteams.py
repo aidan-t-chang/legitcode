@@ -23,7 +23,7 @@ class Solution:
             for i in range(m+1, len(rating)):
                 if rating[i] > rating[m]:
                     right_larger += 1
-            res += left_smaller * right_larger # count ascend
+            res += left_smaller * right_larger # count ascend n choose k (left_smaller choose right_smaller)
 
             left_larger = m - left_smaller
             right_smaller = len(rating) - m - 1 - right_larger # how many elements are to the right of m pointer
