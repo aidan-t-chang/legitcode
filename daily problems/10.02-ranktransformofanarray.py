@@ -9,17 +9,14 @@ from collections import defaultdict
 
 class Solution:
     def arrayRankTransform(self, arr):
-        welcome = arr.copy()
+        welcome = list(set(arr.copy()))
         welcome.sort()
         has = defaultdict(int)
 
         i = 1
-        s = set()
         for val in welcome:
-            if val not in s:
-                has[val] = i
-                s.add(val)
-                i += 1
+            has[val] = i
+            i += 1
 
         res = []
         for val in arr:
