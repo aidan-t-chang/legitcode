@@ -9,6 +9,6 @@ n = int(fin.readline())
 beads = str(fin.readline())
 
 
-# sliding window - longest common substring?
+# sliding window - longest common substring including w?
 
 l, r = 0, 0
