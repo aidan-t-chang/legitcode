@@ -8,16 +8,22 @@
 
 class Solution:
     def maxUniqueSplit(self, s: str) -> int:
-        def backtrack(start, seen):
-            if start == len(s):
+        
+        def dfs(i, cur):
+            if i == len(s):
                 return 0
-            max_splits = 0
-            for end in range(start + 1, len(s) + 1):
-                substring = s[start:end]
-                if substring not in seen:
-                    seen.add(substring)
-                    max_splits = max(max_splits, 1 + backtrack(end, seen))
-                    seen.remove(substring)
-            return max_splits
-        return backtrack(0, set())
+            
+            res = 0
+            for j in range(i, len(s)):
+                substring = s[i:j+1]
+
+                if substring not in cur:
+                    cur.add(substring)
+                    res = max(res, 1 + dfs(j+1, cur))
+                    cur.remove(substring)
+            return res
+        
+        return dfs(0, set())
+        
+
         
