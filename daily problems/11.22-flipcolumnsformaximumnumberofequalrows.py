@@ -4,6 +4,8 @@
 # (i.e., Change the value of the cell from 0 to 1 or vice versa).
 
 # Return the maximum number of rows that have all values equal after some number of flips.
+from collections import defaultdict
+
 
 class Solution:
     def maxEqualRowsAfterFlips(self, matrix) -> int:
