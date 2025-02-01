@@ -9,3 +9,8 @@ class Solution:
                 return False
 
         return True 
+    
+    
+class Solution:
+    def isArraySpecial(self, nums) -> bool:
+        return all((nums[i] % 2 and not nums[i+1] % 2) or (not nums[i] % 2 and nums[i+1] % 2) for i in range(len(nums)-1))
